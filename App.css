@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+/* style={{ boxShadow: "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px" }} */
+
+/* Smooth scrolling */
+html {
+  font-family: Arial, Helvetica, sans-serif !important;
+  scroll-behavior: smooth;
+  background-color: #0360D9 #E6F5FC #A5CCFF #2E2E2E #FFFFFF #0D2B46 #A8A8A8;
+}
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000000 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transition: transform 0.9s linear, background-color 0.9s linear;
+}
+
+
+/* HTML: <div className="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  color: #1CB2FF;
+  position: relative;
+  animation: l40 .5s infinite alternate;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 25px 25px;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.loader:before {
+  background-image:
+    radial-gradient(farthest-side at top left, currentColor 96%, #0000),
+    radial-gradient(farthest-side at top right, currentColor 96%, #0000),
+    radial-gradient(farthest-side at bottom right, currentColor 96%, #0000),
+    radial-gradient(farthest-side at bottom left, currentColor 96%, #0000);
+  animation: l40-1 1s infinite;
+}
+
+.loader:after {
+  background-image:
+    radial-gradient(farthest-side at top left, #0000 94%, currentColor 96%),
+    radial-gradient(farthest-side at top right, #0000 94%, currentColor 96%),
+    radial-gradient(farthest-side at bottom right, #0000 94%, currentColor 96%),
+    radial-gradient(farthest-side at bottom left, #0000 94%, currentColor 96%);
+  animation: l40-2 1s infinite;
+}
+
+@keyframes l40-1 {
+
+  0%,
+  10%,
+  90%,
+  100% {
+    inset: 0
+  }
+
+  40%,
+  60% {
+    inset: -10px
+  }
+}
+
+@keyframes l40-2 {
+
+  0%,
+  40% {
+    transform: rotate(0)
+  }
+
+  60%,
+  100% {
+    transform: rotate(90deg)
+  }
+}
+
+
+/*
+.background {
+  font-size: 13px;
+  font-family: "Lato", sans-serif !important;
+  background: #0D6DFD;
+  background: linear-gradient(90deg, rgba(13, 109, 253, 1) 0%, rgba(13, 109, 253, 1) 40%, rgba(0, 0, 0, 1) 41%, rgba(0, 0, 0, 1) 100%);
+}
+
+
+ input::placeholder,
+select,
+option {
+  color: #7F7F7F !important;
+  font-size: 14px;
+} */
+
+
+
+/* ************************************************* */
+/* ************************************************* */
+/* ************************************************* */
+/* ************************************************* */
+/* ************************************************* */
+
+body {
+  /* background-color: #0054A5 #1CB2FF #8b8b8b; */
+  background-color: #F7F7F7;
+}
+
+*::selection {
+  background-color: #1CB2FF;
+  color: white;
+}
+
+.companydiv {
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  background-image: linear-gradient(rgba(65, 145, 203, 0.582), rgba(65, 145, 203, 0.582)), url("https://www.hoteldel.com/wp-content/uploads/2024/03/shore-house-residence-oceanfront-dining-living-room-K1SOS-K1SOS2-K1SOS3-K1SOV-1600x1000-1.jpg");
+}
+
+.companydiv2 {
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.home-designing.com/wp-content/uploads/2020/09/luxury-living-room.jpg");
+}
+
+.companydiv3 {
+  background-color: #F7F7F7;
+  clip-path: polygon(0 18%, 100% 0%, 100% 89%, 0% 100%);
+}
+
+.companydiv3-half {
+  background-color: #F7F7F7;
+  clip-path: polygon(0 18%, 100% 0%, 100% 92%, 0% 100%);
+}
+
+
+.companydiv3-half2- {
+  background-color: #F7F7F7;
+  clip-path: polygon(0 18%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.companydiv4 {
+  clip-path: polygon(0 24%, 100% 0, 100% 77%, 0 100%);
+}
+
+.companydiv5 {
+  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.testimonial-swiper .swiper-button-prev,
+.testimonial-swiper .swiper-button-prev::after,
+.testimonial-swiper .swiper-button-next,
+.testimonial-swiper .swiper-button-next::after {
+  color: var(--gray) !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-prev::after,
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-next::after {
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+@media (max-width: 1025px) {
+
+  .companydiv,
+  .companydiv2,
+  .companydiv3,
+  .companydiv3-half,
+  .companydiv3-half2,
+  .companydiv4,
+  .companydiv5 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
